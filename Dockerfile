@@ -1,5 +1,5 @@
 FROM golang:alpine
-
+LABEL maintainer="lzn"
 RUN apk add --update --no-cache git \
     && go get -u github.com/alecthomas/gometalinter github.com/gordonklaus/ineffassign github.com/fzipp/gocyclo \    
     && go get -u github.com/client9/misspell/cmd/misspell \
