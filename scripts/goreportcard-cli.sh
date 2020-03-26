@@ -7,7 +7,7 @@ function goreportcardCli(){
   if [ -n $APP_ROOT_DIR ];then
       v_str=" $v_str -v $APP_ROOT_DIR:$APP_ROOT_DIR "    
   fi
-  docker run -d -it --rm $v_str jenner/goreportcard-cli $* 
+  docker run -it --rm $v_str jenner/goreportcard-cli goreportcard-cli $* 
 }
 
 function parseArgs(){
