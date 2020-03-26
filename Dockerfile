@@ -11,8 +11,8 @@ RUN apk add --update --no-cache git \
     && go install golang.org/x/lint/golint golang.org/x/tools/go/ast/astutil  golang.org/x/tools/go/gcexportdata \
     && go get  github.com/gojp/goreportcard/cmd/goreportcard-cli 
 
-COPY ./scripts/docker-entrypoint.sh /usr/bin/docker-entrypoint.sh
-RUN chmod +x /usr/bin/docker-entrypoint.sh
-ENTRYPOINT [ "docker-entrypoint.sh" ]
+COPY ./scripts/docker-entrypint.sh /usr/bin/docker-entrypint.sh
+RUN chmod +x /usr/bin/docker-entrypint.sh
+ENTRYPOINT [ "docker-entrypint.sh" ]
 
 CMD goreportcard-cli
